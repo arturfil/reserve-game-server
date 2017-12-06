@@ -14,7 +14,7 @@ require('dotenv').config();
 
 require('./config/passport-config');
 
-mongoose.connect('mongodb://localhost/reserve-game-server');
+mongoose.connect(process.env.MONGODB_URI);
 
 const app = express();
 
